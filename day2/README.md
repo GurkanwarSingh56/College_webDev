@@ -28,11 +28,11 @@ This project involves creating a professional resume webpage using HTML. The goa
 The project is based on recreating the resume format shown in the attached screenshots:
 
 ### Screenshot 1 - Upper Section
-![Resume Upper Section](screenshot1.png)
+![Resume Upper Section](Screenshot1.png)
 *Shows the header, contact info, and work experience section*
 
 ### Screenshot 2 - Lower Section  
-![Resume Lower Section](screenshot2.png)
+![Resume Lower Section](Screenshot2.png)
 *Shows education and professional skills sections*
 
 ## File Structure
