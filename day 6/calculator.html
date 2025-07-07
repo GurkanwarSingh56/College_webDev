@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+    #calculator{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background-color: gray;
+        height: 600px;
+        width: 500px;
+        gap: 5px;
+        margin: auto;
+        padding: 20px;
+    }
+    .cal_keys{
+        background-color: whitesmoke;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        cursor: pointer;
+        border: 1px solid black;
+    }
+    .textarea{
+        grid-column: 1/5;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    #calculator > button:nth-child(16) {
+  grid-column: 3 / 5;
+}
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" class="textarea" id="screen" readonly>
+        
+       
+        <button class="cal_keys" onclick="pressKey('1')">1</button>
+        <button class="cal_keys" onclick="pressKey('2')">2</button>
+        <button class="cal_keys" onclick="pressKey('3')">3</button>
+        <button class="cal_keys" onclick="pressKey('+')">+</button>
+        
+        <button class="cal_keys" onclick="pressKey('4')">4</button>
+        <button class="cal_keys" onclick="pressKey('5')">5</button>
+        <button class="cal_keys" onclick="pressKey('6')">6</button>
+        <button class="cal_keys" onclick="pressKey('-')">-</button>
+        
+        <button class="cal_keys"  onclick="pressKey('7')">7</button>
+        <button class="cal_keys"  onclick="pressKey('8')">8</button>
+        <button class="cal_keys"  onclick="pressKey('9')">9</button>
+        <button class="cal_keys"  onclick="pressKey('*')">*</button>
+        
+        <button class="cal_keys"  onclick="calculate()">=</button>
+        <button class="cal_keys" onclick="pressKey('0')">0</button>
+        <button class="cal_keys"  onclick="pressKey('/')">/</button>
+    </div>
+   <script>
+    const screen = document.getElementById('screen');
+    
+    function pressKey(value) {
+        screen.value += value;
+    }
+    
+    function calculate() {
+            screen.value = eval(screen.value);
+       
+    }
+    document.addEventListener('keydown', function(event) {
+        const key = event.key;
+        if (key >= '0' && key <= '9') {
+            pressKey(key);
+        }
+        if (key== '+'|| key =='*' || key =="/" || key == "-") {
+            pressKey(key);
+        }
+        if (key === '=' || key === 'Enter') {
+            calculate();
+        }
+    });
+</script>
+</body>
+</html>
