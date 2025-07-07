@@ -1,0 +1,33 @@
+.chess {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    border: 2px solid #333;
+}
+
+.chess_box {
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.chess_box {
+    background-color: #f0d9b5; 
+}
+
+
+.chess_box:nth-child(16n+1), 
+.chess_box:nth-child(16n+3), 
+.chess_box:nth-child(16n+5), 
+.chess_box:nth-child(16n+7),
+.chess_box:nth-child(16n+10), 
+.chess_box:nth-child(16n+12), 
+.chess_box:nth-child(16n+14), 
+.chess_box:nth-child(16n+16) {
+    background-color: #b58863; 
+}

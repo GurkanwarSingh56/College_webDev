@@ -1,0 +1,17 @@
+#parent{
+    width: 80%;
+    height: 800px;
+    border: 2px solid green;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+#parent>div:nth-child(3){
+    background-color: lightblue;
+        grid-area: 1 / 3 / 5 / 4;
+
+}
+.box{
+    border: 1px solid blue;
+
+}
