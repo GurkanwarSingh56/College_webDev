@@ -17,11 +17,11 @@
 // var b=50;
 // const c=30;
 // console.log(c);
-function myname(){
-        comsole.log("gavi")
-}
-function myFun(){
-        myname()
-console.log("hi from gavi")
-}
-myFunction()
+// function myname(){
+//         comsole.log("gavi")
+// }
+// function myFun(){
+//         myname()
+// console.log("hi from gavi")
+// }
+// myFunction()
