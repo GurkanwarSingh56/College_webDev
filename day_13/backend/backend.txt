@@ -1,0 +1,6 @@
+config---- database connectivity
+controllers--- api's logic part or mannage with api
+middleware--- middleware(kind of machanism between two task)
+moddels---define structures (schema)
+routes-- "/.." (end modules that defines routes)
+utils--small tasks and it is a part of js
