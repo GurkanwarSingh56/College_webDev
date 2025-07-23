@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Signup</title>
+</head>
+<body>
+    <h1>Test Signup Form</h1>
+    <button id="testBtn">Test Backend Connection</button>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('testBtn').addEventListener('click', async () => {
+            const result = document.getElementById('result');
+            result.innerHTML = 'Testing...';
+            
+            try {
+                // Test data
+                const testData = {
+                    name: "Test User 2",
+                    email: "test2@test.com", 
+                    password: "1234",
+                    phoneNumber: "1234567890",
+                    age: "25"
+                };
+                
+                const response = await fetch('http://localhost:3000/api/user/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(testData)
+                });
+                
+                const data = await response.json();
+                result.innerHTML = `
+                    <h3>Success!</h3>
+                    <pre>${JSON.stringify(data, null, 2)}</pre>
+                `;
+                
+            } catch (error) {
+                result.innerHTML = `
+                    <h3>Error:</h3>
+                    <p style="color: red;">${error.message}</p>
+                    <p>Error Type: ${error.name}</p>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

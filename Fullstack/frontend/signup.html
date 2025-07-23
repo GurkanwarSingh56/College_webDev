@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/login.css">
+   
+  </head>
+  
+  <body>
+      <nav>
+            <div class="leftnav"><h1>Logo</h1></div>
+            <div class="rightnav">
+                <h1 onclick="window.location.href= '../frontend/index.html'">Home</h1>
+                <h1 onclick="window.location.href= '../frontend/login.html'">Login</h1>
+                <h1 onclick="window.location.href= '../frontend/signup.html'">Sign up</h1>
+                <h1 onclick="window.location.href= '../frontend/product.html'">Products</h1>
+            </div>
+        </nav>
+    <div id="parent">
+      <form action="" id="form">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="name" />
+        <label for="email">email</label>
+        <input type="email" id="email" placeholder="email..." />
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="password" />
+        <label for="phoneNumber">Phone Number</label>
+        <input
+          type="phoneNumber"
+          id="phoneNumber"
+          placeholder="phoneNumber"
+        />
+        <label for="age">Age</label>
+        <input
+          type="age"
+          id="age"
+          placeholder="age"
+        />
+        <button type="submit" id="btn">Submit</button>
+      </form>
+    </div>
+
+    <div id="userData" style="display: flex; justify-content: center; align-items: center;"></div>
+
+  </body>
+    </main>
+        <footer>
+        </footer>
+  <script src="./script/signup.js"></script>
+</html>
